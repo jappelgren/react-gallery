@@ -8,7 +8,6 @@ export default function GalleryItem({ image, addLike }) {
     return (
         <div key={image.id} className={"card " + image.orientation}>
             <ImageDescriptionToggle cardFlip={cardFlip} setCardFlip={setCardFlip} image={image} addLike={addLike} />
-            <p>This picture has been liked {image.likes} times</p>
         </div >
     )
 }

@@ -15,28 +15,90 @@
 
 .gallery-container {
   display: flex;
-}
-
-.portrait {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 20%;
-  height: auto;
-  border: 1px solid black;
-}
-
-.landscape {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30%;
-  height: auto;
-  border: 1px solid black;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 2rem 0 2rem;
 }
 
 img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  transition: all .2s ease-out;
+}
+
+.portrait,
+.landscape {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  contain: content;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  margin: 1rem 0.5rem 0 0.5rem;
+  box-shadow: 4px 4px 12px rgb(66, 66, 66);
+  transition: all 0.2s ease-out;
+  background-color: rgb(54, 54, 54);
+  justify-content: center;
+}
+
+.landscape.like-container {
+  bottom: 50%;
+}
+
+div:last-child {
+  bottom: 0%;
+}
+
+.portrait:hover,
+.landscape:hover {
+  transform: scale(1.15);
+  -webkit-transform: scale(1.15);
+  z-index: 2;
+}
+
+.like-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  background-color: rgba(34, 34, 34, 0.3);
+}
+
+.like-container.landscape-like {
+  background-color: rgba(34, 34, 34, 0);
+}
+
+.like-btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.card-desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+svg {
+  fill: white;
+  transition: all 0.2s ease-out;
+}
+
+svg:hover {
+  fill: rgb(241, 63, 63);
+}
+
+p {
+  color: white;
+}
+
+img:active {
+  transform: rotateY(90deg);
 }
