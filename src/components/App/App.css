@@ -3,14 +3,22 @@
 }
 
 .App-header {
-  background-color: #222;
-  padding: 1em;
-  color: white;
+  background-color: rgb(25, 47, 80);
+  color: rgb(226, 219, 219);
+  padding: 0.1rem 0 0.1rem 0;
   margin-bottom: 1em;
+  font-family: 'Bebas Neue', cursive;
+  text-shadow: 0px 4px 8px black;
+  font-size: 2rem;
+  box-shadow: 0 4px 2px rgb(54, 54, 54);
 }
 
 .App-title {
   font-size: 1.5em;
+}
+body {
+  background-color: rgb(119, 119, 119);
+  padding-bottom: 2rem;
 }
 
 .gallery-container {
@@ -24,7 +32,12 @@ img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  transition: all .2s ease-out;
+  transition: all 0.2s ease-out;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
 }
 
 .portrait,
@@ -33,13 +46,13 @@ img {
   flex-direction: column;
   justify-content: space-between;
   contain: content;
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   z-index: 1;
   margin: 1rem 0.5rem 0 0.5rem;
-  box-shadow: 4px 4px 12px rgb(66, 66, 66);
+  box-shadow: 4px 4px 12px rgb(59, 59, 59);
   transition: all 0.2s ease-out;
-  background-color: rgb(54, 54, 54);
+  background-color: rgb(25, 47, 80);
   justify-content: center;
 }
 
@@ -47,14 +60,9 @@ img {
   bottom: 50%;
 }
 
-div:last-child {
-  bottom: 0%;
-}
-
-.portrait:hover,
-.landscape:hover {
-  transform: scale(1.15);
-  -webkit-transform: scale(1.15);
+img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
   z-index: 2;
 }
 
@@ -65,6 +73,7 @@ div:last-child {
   width: 100%;
   bottom: 0%;
   background-color: rgba(34, 34, 34, 0.3);
+  margin-left: 0.3rem;
 }
 
 .like-container.landscape-like {
@@ -96,9 +105,8 @@ svg:hover {
 }
 
 p {
-  color: white;
+  color: rgb(226, 219, 219);
 }
-
-img:active {
-  transform: rotateY(90deg);
+.card-desc > p {
+  margin: 0 1rem 0 1rem;
 }

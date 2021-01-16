@@ -35,7 +35,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1 className="App-title">Gallery of My Life</h1>
+        <h1 className="App-title">
+          TOKYO - OSAKA - KYOTO
+          <br /> 2018
+        </h1>
       </header>
       <main className="gallery">
         <GalleryList gallery={gallery} addLike={addLike} />
