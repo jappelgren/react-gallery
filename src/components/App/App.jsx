@@ -2,6 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 import GalleryList from '../GalleryList/GalleryList';
+import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import AddAPhotoIcon from '@material-ui/icons/AddAPhoto';
 
 function App() {
   const [gallery, setGallery] = useState([]);
@@ -34,12 +40,14 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1 className="App-title">
-          TOKYO - OSAKA - KYOTO
-          <br /> 2018
-        </h1>
-      </header>
+      <AppBar position="static" >
+        <Toolbar className="tool-bar">
+          <Typography variant="h6">TOKYO - OSAKA - KYOTO 2018</Typography>
+          <IconButton edge="start" color="inherit" aria-label="menu">
+            <AddAPhotoIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
       <main className="gallery">
         <GalleryList gallery={gallery} addLike={addLike} />
       </main>

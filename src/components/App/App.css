@@ -1,24 +1,12 @@
-.App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: rgb(25, 47, 80);
-  color: rgb(226, 219, 219);
-  padding: 0.1rem 0 0.1rem 0;
-  margin-bottom: 1em;
-  font-family: 'Bebas Neue', cursive;
-  text-shadow: 0px 4px 8px black;
-  font-size: 2rem;
-  box-shadow: 0 4px 2px rgb(54, 54, 54);
-}
-
-.App-title {
-  font-size: 1.5em;
-}
 body {
   background-color: rgb(119, 119, 119);
   padding-bottom: 2rem;
+}
+
+.tool-bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(25, 47, 80);
 }
 
 .gallery-container {
@@ -95,12 +83,12 @@ img:hover {
   width: 100%;
 }
 
-svg {
+.heart {
   fill: white;
   transition: all 0.2s ease-out;
 }
 
-svg:hover {
+.heart:hover {
   fill: rgb(241, 63, 63);
 }
 
