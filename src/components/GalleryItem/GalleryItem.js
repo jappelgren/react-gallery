@@ -4,11 +4,11 @@ import ImageDescriptionToggle from "../ImageDescriptionToggle/ImageDescriptionTo
 export default function GalleryItem({ image, addLike }) {
 
     const [cardFlip, setCardFlip] = useState(false);
-    console.log
+
     return (
-        <div key={image.id} className="card" className="">
+        <div key={image.id} className={"card " + image.orientation}>
             <ImageDescriptionToggle cardFlip={cardFlip} setCardFlip={setCardFlip} image={image} addLike={addLike} />
-            <p>This picture has been liked {image.likes}</p>
+            <p>This picture has been liked {image.likes} times</p>
         </div >
     )
 }
