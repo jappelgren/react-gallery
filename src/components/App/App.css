@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(119, 119, 119);
+  background-color: rgb(204, 204, 204);
   padding-bottom: 2rem;
 }
 
@@ -37,15 +37,13 @@ img {
   width: 400px;
   height: 400px;
   z-index: 1;
-  margin: 1rem 0.5rem 0 0.5rem;
-  box-shadow: 4px 4px 12px rgb(59, 59, 59);
   transition: all 0.2s ease-out;
-  background-color: rgb(25, 47, 80);
   justify-content: center;
+  margin: 0.25rem;
 }
 
-.landscape.like-container {
-  bottom: 50%;
+.landscape {
+  height: auto;
 }
 
 img:hover {
@@ -60,12 +58,17 @@ img:hover {
   position: absolute;
   width: 100%;
   bottom: 0%;
-  background-color: rgba(34, 34, 34, 0.3);
-  margin-left: 0.3rem;
+  background-color: rgba(34, 34, 34, 0.4);
+  padding-left: 0.3rem;
+}
+
+.like-container > p {
+  color: white;
 }
 
 .like-container.landscape-like {
-  background-color: rgba(34, 34, 34, 0);
+  background-color: rgba(34, 34, 34, 0.4);
+  bottom: 2%;
 }
 
 .like-btn {
@@ -79,6 +82,7 @@ img:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(112, 112, 112);
   height: 100%;
   width: 100%;
 }
@@ -93,7 +97,7 @@ img:hover {
 }
 
 p {
-  color: rgb(226, 219, 219);
+  color: rgb(202, 202, 202);
 }
 .card-desc > p {
   margin: 0 1rem 0 1rem;

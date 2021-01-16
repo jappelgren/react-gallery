@@ -25,7 +25,7 @@ router.put('/:id', (req, res) => {
 
 // GET Route
 router.get('/', (req, res) => {
-    const queryText = `SELECT * FROM "pics" ORDER BY "id"`
+    const queryText = `SELECT * FROM "pics" ORDER BY "orientation" DESC, "id" `
     pool.query(queryText).then((result) => {
         res.send(result.rows);
     }).catch((err) => {
