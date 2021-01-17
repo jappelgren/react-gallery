@@ -1,3 +1,6 @@
+* {
+  outline: 0;
+}
 body {
   background-color: rgb(204, 204, 204);
   padding-bottom: 2rem;
@@ -104,18 +107,18 @@ p {
 }
 
 .modal-img-container {
-  height: 80vh;
-  width: 80vw;
-  display: flex;
-  background-color: aqua;
+  height: 80%;
+  width: auto;
+  display: inline-block;
   justify-content: center;
   align-items: center;
   position: absolute;
+  top: 10%;
   contain: content;
 }
 
 .modal-img {
   height: 100%;
-  width: 100%auto;
+  width: 100%;
   object-fit: scale-down;
 }

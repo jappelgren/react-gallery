@@ -1,5 +1,4 @@
 import IconButton from "@material-ui/core/IconButton";
-import Favorite from "@material-ui/icons/Favorite"
 import { useState } from "react"
 import ExpandPhoto from "../ExpandPhoto/ExpandPhoto";
 import ImageDescriptionToggle from "../ImageDescriptionToggle/ImageDescriptionToggle";
@@ -25,6 +24,7 @@ export default function GalleryItem({ image, addLike }) {
                 <p>{image.likes}</p>
                 <ExpandPhoto image={image} className="modal" />
             </span>
+
         </div >
     )
 }
