@@ -3,14 +3,17 @@ import { useState } from "react"
 import ExpandPhoto from "../ExpandPhoto/ExpandPhoto";
 import ImageDescriptionToggle from "../ImageDescriptionToggle/ImageDescriptionToggle";
 
+//GalleryItem is a component that is called in the GalleryList .map method.  Each instance of the GalleryItem
+//will display a different picture based on the information from the database.
 export default function GalleryItem({ image, addLike }) {
-
+    //cardFlip will display the photo on false and the description of the photo on true.
     const [cardFlip, setCardFlip] = useState(false);
 
     return (
         <div key={image.id} className={"card " + image.orientation}>
             <ImageDescriptionToggle cardFlip={cardFlip} setCardFlip={setCardFlip} image={image} addLike={addLike} />
             <span className={"like-container " + image.orientation + "-like"}>
+                {/* I liked this heart button better than the Material UI ones */}
                 <IconButton className="like-btn" onClick={() => addLike(image.id)}>
                     <svg
                         className="heart"
