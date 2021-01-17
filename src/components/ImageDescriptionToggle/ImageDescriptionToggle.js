@@ -12,6 +12,7 @@ export default function ImageDescriptionToggle({ setCardFlip, cardFlip, image, a
                 <img
                     src={"images/" + image.filename}
                     alt={image.description}
+                    className="gallery-img"
                     onClick={() => window.setTimeout(() => {
                         setCardFlip(!cardFlip)
                     }, 180)}

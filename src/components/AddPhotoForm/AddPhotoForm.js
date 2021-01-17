@@ -34,6 +34,7 @@ export default function AddPhotoForm() {
                 color="inherit"
                 aria-label="menu"
                 onClick={() => handleClickOpen()}
+                disabled
             >
                 <AddAPhotoIcon />
             </IconButton>
