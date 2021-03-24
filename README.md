@@ -9,3 +9,12 @@ I built a photo album using React. This is my first attempt creating something w
 I wanted to make sure that the project looked appealing but wasn't overly styled as to take attention away from the photos. The photos are sorted by their id from the database and then by their orientation. Portrait photos appear first and landscape photos second. If a user clicks on the photo it will reveal a description of the photo. A like button is located on the lower left corner of the photo and when pressed increments a like counter on the right. The amount of likes a picture has is stored in the database. A expand photo button is placed to the right of the counter. Clicking on this will display a larger more full version of the photo. Clicking anywhere on the DOM will close the larger photo. These pop out photos are a modal from Material UI. It took me a minute to get them looking the way they do.
 
 I had little difficulty with React. I really enjoyed working with it and am looking forward to do more with it. I also really like Material UI and now that I know how to use it I will probably implement it from the beginning of the next project and write less vanilla csss.
+
+
+## Built With
+
+- [React](https://reactjs.org/)
+- [Material-UI](https://material-ui.com/)
+- [PG](https://node-postgres.com/)
+- [Node](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
